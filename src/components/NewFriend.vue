@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="setContect">
+  <form @submit.prevent="setContact">
     <div>
       <label for="Name">Name:</label>
       <input type="text" id="Name" v-model="name" />
@@ -13,7 +13,7 @@
       <input type="email" id="email" v-model="email" />
     </div>
     <div>
-      <button>AddContect</button>
+      <button>AddContact</button>
     </div>
   </form>
 </template>
@@ -29,7 +29,7 @@ export default {
     };
   },
   methods: {
-    setContect() {
+    setContact() {
       this.id = this.name;
       const val = {
         id: new Date().toISOString(),

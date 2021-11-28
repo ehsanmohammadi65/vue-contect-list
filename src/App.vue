@@ -4,7 +4,7 @@
 
     <new-friend @toggle-newFriend="setData"></new-friend>
     <ul>
-      <friend-contect
+      <friend-contact
         v-for="friend in friends"
         :key="friend.id"
         :id="friend.id"
@@ -13,8 +13,8 @@
         :email="friend.email"
         :is-favorite="friend.isFavorite"
         @toggle-favorite="toggleFavorite"
-        @toggle-delete="deleteContect"
-      ></friend-contect>
+        @toggle-delete="deleteContact"
+      ></friend-contact>
     </ul>
   </section>
 </template>
@@ -52,7 +52,7 @@ export default {
       console.log(val);
       this.friends.unshift(val);
     },
-    deleteContect(id) {
+    deleteContact(id) {
       this.friends = this.friends.filter((friend) => friend.id !== id);
     },
   },
